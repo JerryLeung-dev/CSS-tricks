@@ -1,0 +1,85 @@
+html {
+    /* set the font-size to 62.5% of default size: 16px so that the customized size now is 10px */
+    font-size: 62.5%;
+}
+
+p, a{
+    font-size: 3rem;
+}
+
+body { 
+    margin: 0;
+    padding: 0;
+
+
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+}
+
+button {
+    /* Basic */
+    padding:10px 20px;
+    background-color: rgba(56, 56, 194, 0.767);
+    color: white;
+
+    border: none;
+    outline:none;
+
+    /*  animation*/
+    animation : fade 2s ease forwards;
+}
+
+/* Change behavior of element when p being selected */
+p::selection {
+    background-color: rgba(158, 158, 19, 0.514);
+    color: white;
+}
+/* Change the first letter of the paragraph */
+p::first-letter {
+    font-size:10rem;
+    font-weight: bold;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+div, #article2 {
+    height: 100vh;
+    display: block;
+    width: 100%;
+}
+
+h1 {
+    background: linear-gradient(to left, rgba(252, 169, 60, 0.452), rgba(191, 58, 231, 0.452));
+    /* clip the background color to the text */
+    -webkit-background-clip: text;
+    /* get rid of default black color in the text  */
+    -webkit-text-fill-color: transparent;
+    /* limit the size of box to text only */
+    display:inline;
+
+    font-size: 20rem;
+}
+
+body {
+    background: rgba(2, 14, 9, 0.945);
+    /* invert all dark element to light element */
+    /* invert(0) for initial colors, 1 for inverted colors */
+    filter: invert(1) hue-rotate(180deg);
+}
+
+@keyframes fade {
+    from {
+        opacity: 1;
+        /* Able interact with button for all events related */
+        pointer-events: all; 
+    } 
+    to {
+        opacity: 0;
+        /* Disable all events of button*/
+        pointer-events: none; 
+    }
+}
